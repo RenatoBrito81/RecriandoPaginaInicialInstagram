@@ -30,10 +30,32 @@ body {
     align-items: center;
     justify-content: center;
     width: 50%;
+
+    position: relative;
+    top: 0px;
+    left: 0px;
 }
 
 .instagram-celular img {
     height: 618px;
+}
+
+.instagram-celular-tela {
+    display: flex;
+    position: absolute;
+    top: 16.2%;
+    left: 32.3%;
+}
+
+.instagram-celular-tela img {
+    height: 426px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1000ms;
+}
+
+.instagram-celular-tela img.selecionada {
+    opacity: 1;
 }
 
 .instagram-continue {
@@ -127,4 +149,34 @@ body {
 
 .download-app:nth-child(2) {
     background-image: url('/img/instagram-google-play.png');
+}
+
+/* responsividade */
+
+@media (max-width: 1024px) {
+    .instagram-wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px) {
+    body {
+        background-color: #ffffff;
+    }
+
+    .instagram-wrapper {
+        width: 90%;
+    }
+
+    .instagram-celular {
+        display: none;
+    }
+
+    .instagram-continue {
+        width: 100%;
+    }
+    
+    .grupo {
+        border: 1px solid transparent;
+    }
 }
